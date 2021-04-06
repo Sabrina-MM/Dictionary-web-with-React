@@ -1,11 +1,18 @@
+import logo from "../img/logo.png";
+
 import "../App.css";
 
-function App() {
+export default function Views() {
   return (
     <div className="App">
-      <h1>Dictionary</h1>
+      <header>
+        <h1>Dictionary</h1>
+        <img
+          src={logo}
+          alt="Dictionary Logo"
+          className="website-logo img-fluid"
+        />
+      </header>
     </div>
   );
 }
-
-export default App;
