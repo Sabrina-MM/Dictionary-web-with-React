@@ -1,6 +1,21 @@
 .App {
   text-align: center;
+  margin: 40px;
 }
-.website-logo {
-  max-width: 200px;
+.App .website-logo {
+  max-width: 300px;
+  padding: 35px;
+  margin: 0 auto;
+}
+
+.App-footer {
+  text-align: center;
+  margin: 30px;
+}
+
+/* Dictionary component */
+
+form label {
+  display: block;
+  font-size: 20px;
 }
