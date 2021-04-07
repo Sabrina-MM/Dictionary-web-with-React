@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  margin: 40px;
+  margin: 0 auto;
+  max-width: 900px;
 }
 .App .website-logo {
   max-width: 300px;

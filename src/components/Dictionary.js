@@ -4,8 +4,18 @@ import "../App.css";
 export default function Dictionary() {
   const [keyWord, setKeyWord] = useState("");
 
+  function gettingData() {
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyWord}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => console.error(error));
+  }
+
   function search(e) {
     e.preventDefault();
+    gettingData();
   }
 
   return (
@@ -19,7 +29,6 @@ export default function Dictionary() {
         />
       </form>
       <small>i.e. paris, wine, yoga, coding</small>
-      <p>{keyWord}</p>
     </div>
   );
 }
