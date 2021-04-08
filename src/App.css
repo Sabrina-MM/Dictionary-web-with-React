@@ -1,12 +1,17 @@
+:root {
+  --primary-font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+}
 .App {
-  text-align: center;
   margin: 0 auto;
   max-width: 900px;
+  font-family: var(--primary-font-family);
 }
 .App .website-logo {
   max-width: 300px;
   padding: 35px;
   margin: 0 auto;
+  display: block;
+  text-align: center;
 }
 
 .App-footer {
