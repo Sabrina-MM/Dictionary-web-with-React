@@ -7,7 +7,6 @@ export default function Meaning({ meaning }) {
     <div className="Meaning">
       <h3>{meaning.partOfSpeech}</h3>
       {meaning.definitions.map((definition, index) => {
-        console.log(definition.synonyms);
         return (
           <div key={index}>
             <p>{definition.definition}</p>
