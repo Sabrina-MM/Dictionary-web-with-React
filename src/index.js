@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Views from "../src/Views";
+import Views from "../src/views/Views";
 
 ReactDOM.render(
   <React.StrictMode>
