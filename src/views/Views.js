@@ -17,10 +17,27 @@ export default function Views() {
         <main>
           <Dictionary />
         </main>
-        <footer className="App-footer">
-          <p>Coded by Sabrina Martinez</p>
-        </footer>
       </div>
+      <footer className="App-footer">
+        <small>
+          This project was coded by Sabrina Martinez and is open-sourced on{" "}
+          <a
+            href="https://github.com/Sabrina-MM/react-dictionary"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>{" "}
+          and hosted on{" "}
+          <a
+            href="https://serene-babbage-afa89a.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Netlify
+          </a>
+        </small>
+      </footer>
     </div>
   );
 }

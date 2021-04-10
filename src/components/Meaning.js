@@ -10,7 +10,9 @@ export default function Meaning({ meaning }) {
         return (
           <div key={index}>
             <p>{definition.definition}</p>
-            <small className="text-muted">i.e. {definition.example}</small>
+            <small className="text-muted">
+              <i>i.e. {definition.example}</i>
+            </small>
             <Synonyms synonyms={definition.synonyms} />
           </div>
         );

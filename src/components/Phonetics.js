@@ -3,7 +3,6 @@ import React from "react";
 import "../App.css";
 
 export default function Phonetics({ phonetics }) {
-  console.log(phonetics);
   return (
     <div className="Phonetics">
       <a

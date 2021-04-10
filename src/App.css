@@ -1,27 +1,62 @@
-:root {
-  --primary-font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+/* color:#B6E6F2 */
+body {
+  background: #ddb4b46b;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  line-height: 30px;
+  font-size: 15px;
 }
+
 .App {
-  text-align: center;
   margin: 0 auto;
-  max-width: 900px;
-  font-family: var(--primary-font-family);
+  max-width: 1000px;
 }
+
 .App .website-logo {
   max-width: 300px;
   padding: 35px;
   margin: 0 auto;
+  text-align: center;
+  display: block;
 }
 
 .App-footer {
   text-align: center;
   margin: 30px;
 }
-::-webkit-media-controls-enclosure {
+/* ::-webkit-media-controls-enclosure {
   background-color: transparent;
+} */
+
+.Dictionary input {
+  width: 100%;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  height: 55px;
+  padding: 0 0 0 14px;
 }
 
-/* Dictionary component */
+.Dictionary section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 38px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  margin: 10px;
+}
+.Dictionary h3 {
+  font-weight: bold;
+}
+
+.Dictionary label {
+  font-size: 24px;
+}
+.Results .word {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.Photos img:hover {
+  transform: scale(1.01);
+}
 
 form label {
   display: block;

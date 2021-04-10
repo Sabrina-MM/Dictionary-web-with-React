@@ -7,20 +7,22 @@ export default function WordDefinition({ results }) {
   if (results) {
     return (
       <div className="Results">
-        <h3>{results.word}</h3>
-        {results.phonetics.map((phonetics, index) => {
-          return (
-            <div key={index}>
-              <Phonetics phonetics={phonetics} />
-            </div>
-          );
-        })}
+        <section>
+          <h3 className="word">{results.word}</h3>
+          {results.phonetics.map((phonetics, index) => {
+            return (
+              <div key={index}>
+                <Phonetics phonetics={phonetics} />
+              </div>
+            );
+          })}
+        </section>
 
         {results.meanings.map((meaning, index) => {
           return (
-            <div key={index}>
+            <section key={index}>
               <Meaning meaning={meaning} />
-            </div>
+            </section>
           );
         })}
       </div>
