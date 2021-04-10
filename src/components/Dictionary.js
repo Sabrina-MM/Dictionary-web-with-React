@@ -21,7 +21,7 @@ export default function Dictionary() {
     // geeting data(pictures) from pexels.com API
 
     fetch(
-      `https://api.pexels.com/v1/search?query=${keyWord}&per_page=12
+      `https://api.pexels.com/v1/search?query=${keyWord}&per_page=15
 `,
       {
         method: "GET",
