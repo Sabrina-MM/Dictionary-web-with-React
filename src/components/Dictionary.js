@@ -11,7 +11,7 @@ export default function Dictionary() {
 
   useEffect(() => {
     gettingData();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   function gettingData() {
     // getting data(dictionary) from API
