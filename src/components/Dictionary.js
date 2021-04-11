@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Results from "../components/Results";
 import PhotoGallery from "./PhotoGallery";
+
 import "../App.css";
 
 export default function Dictionary() {
-  const [keyWord, setKeyWord] = useState("");
+  const [keyWord, setKeyWord] = useState("welcome");
   const [results, setResults] = useState("");
   const [photos, setPhotos] = useState("");
+
+  useEffect(() => {
+    gettingData();
+  }, []);
 
   function gettingData() {
     // getting data(dictionary) from API
@@ -26,8 +31,7 @@ export default function Dictionary() {
       {
         method: "GET",
         headers: {
-          Authorization:
-            "563492ad6f917000010000012f671a39cc62479ba2084ee3b20618b3",
+          Authorization: process.env.REACT_APP_DICTIONARY_API_KEY,
         },
       }
     )
@@ -63,6 +67,7 @@ export default function Dictionary() {
             placeholder="Search for a word"
             onChange={(e) => setKeyWord(e.target.value)}
             className="search"
+            defaultValue="welcome"
           />
         </form>
         <small>i.e. paris, wine, yoga, coding</small>
