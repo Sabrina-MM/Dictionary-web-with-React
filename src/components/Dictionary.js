@@ -67,10 +67,12 @@ export default function Dictionary() {
             placeholder="Search for a word"
             onChange={(e) => setKeyWord(e.target.value)}
             className="search"
-            defaultValue="welcome"
+            defaultValue={null}
           />
         </form>
-        <small>i.e. paris, wine, yoga, coding</small>
+        <small>
+          <i>i.e. paris, wine, yoga, coding</i>
+        </small>
       </section>
       <Results results={results} />
       <PhotoGallery photos={photos} />

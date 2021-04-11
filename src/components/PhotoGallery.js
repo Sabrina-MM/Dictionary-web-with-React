@@ -8,7 +8,7 @@ export default function PhotoGallery({ photos }) {
       <section className="Photos">
         <div className="row">
           <h3 className="text-center">
-            Photos <i class="fas fa-camera-retro"></i>
+            Photos <i className="fas fa-camera-retro"></i>
           </h3>
           {photos.map((photo, index) => {
             return (
