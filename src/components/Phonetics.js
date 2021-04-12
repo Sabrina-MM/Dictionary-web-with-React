@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../App.css";
+import "../css/App.css";
 
 export default function Phonetics({ phonetics }) {
   return (

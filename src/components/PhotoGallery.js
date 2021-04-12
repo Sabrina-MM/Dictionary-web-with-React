@@ -1,8 +1,7 @@
 import React from "react";
-import "../App.css";
+import "../css/PhotoGallery.css";
 
 export default function PhotoGallery({ photos }) {
-  console.log(photos);
   if (photos) {
     return (
       <section className="Photos">

@@ -1,0 +1,25 @@
+:root {
+  --primary-color: #fff;
+  --input-border: #dadce0;
+}
+.Dictionary section {
+  background: var(--primary-color);
+  border-radius: 8px;
+  padding: 38px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  margin: 10px;
+}
+.Dictionary h3 {
+  font-weight: bold;
+}
+.Dictionary input {
+  width: 100%;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  height: 55px;
+  padding: 0 0 0 14px;
+}
+
+.Dictionary label {
+  font-size: 24px;
+}

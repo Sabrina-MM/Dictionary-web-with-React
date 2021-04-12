@@ -1,0 +1,24 @@
+body {
+  background: #ddb4b46b;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+.App {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.App .website-logo {
+  max-width: 300px;
+  padding: 35px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+.App-footer {
+  text-align: center;
+  margin: 30px;
+}

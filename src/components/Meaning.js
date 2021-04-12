@@ -1,6 +1,6 @@
 import React from "react";
 import Synonyms from "../components/Synonyms";
-import "../App.css";
+import "../css/App.css";
 
 export default function Meaning({ meaning }) {
   return (

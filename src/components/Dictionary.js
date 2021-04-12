@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Results from "../components/Results";
 import PhotoGallery from "./PhotoGallery";
 
-import "../App.css";
+import "../css/Dictionary.css";
 
 export default function Dictionary() {
   const [keyWord, setKeyWord] = useState("welcome");
@@ -47,7 +47,6 @@ export default function Dictionary() {
   }
 
   function gettingPicturesResults(data) {
-    console.log(data.photos);
     setPhotos(data.photos);
   }
 

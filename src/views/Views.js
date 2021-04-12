@@ -1,7 +1,8 @@
 import logo from "../img/logo.png";
 import Dictionary from "../components/Dictionary";
+import ScrollToTop from "../components/ScrollToTop";
 
-import "../App.css";
+import "../css/App.css";
 
 export default function Views() {
   return (
@@ -16,6 +17,7 @@ export default function Views() {
         </header>
         <main>
           <Dictionary />
+          <ScrollToTop />
         </main>
 
         <footer className="App-footer">
