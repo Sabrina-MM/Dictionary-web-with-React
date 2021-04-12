@@ -3,3 +3,9 @@
   margin-top: 10px;
   padding: 5px;
 }
+
+@media (max-width: 770px) {
+  audio:nth-child(2) {
+    width: 200px;
+  }
+}
