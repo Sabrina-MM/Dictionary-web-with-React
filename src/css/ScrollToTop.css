@@ -1,3 +1,6 @@
 .Scroll-to-top:hover {
   color: blue;
 }
+.Scroll-to-top .fa-angle-double-up {
+  cursor: pointer;
+}
