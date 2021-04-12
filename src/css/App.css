@@ -1,5 +1,5 @@
 body {
-  background: #ddb4b46b;
+  background: var(--secondary-color);
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
   line-height: 30px;
   font-size: 15px;

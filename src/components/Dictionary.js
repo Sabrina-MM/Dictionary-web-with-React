@@ -50,7 +50,7 @@ export default function Dictionary() {
     setPhotos(data.photos);
   }
 
-  function search(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     gettingData();
   }
@@ -58,7 +58,7 @@ export default function Dictionary() {
   return (
     <div className="Dictionary">
       <section>
-        <form onSubmit={search}>
+        <form onSubmit={handleSubmit}>
           <h3 className="mb-4 ">What word do you want to look up?</h3>
           <input
             type="search"
