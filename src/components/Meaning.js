@@ -11,7 +11,7 @@ export default function Meaning({ meaning }) {
           <div key={index}>
             <p>{definition.definition}</p>
             <small className="text-muted">
-              <i>i.e. {definition.example}</i>
+              {definition.example ? <i>i.e. {definition.example}</i> : null}
             </small>
             <Synonyms synonyms={definition.synonyms} />
           </div>
