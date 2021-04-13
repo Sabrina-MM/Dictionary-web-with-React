@@ -16,17 +16,27 @@ export default function Dictionary() {
   function gettingData() {
     // getting data(dictionary) from API
 
-    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyWord}`)
-      .then((response) => response.json())
-      .then((data) => {
-        gettingDictionaryresults(data);
-      })
-      .catch((error) => console.error(error));
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyWord}`).then(
+      (response) => {
+        if (response.status !== 200) {
+          alert(
+            `Sorry, I can not find "${keyWord}". Try again with another word!`
+          );
+          return;
+        }
+        response
+          .json()
+          .then((data) => {
+            gettingDictionaryresults(data);
+          })
+          .catch((error) => console.error(error));
+      }
+    );
 
     // geeting data(pictures) from pexels.com API
 
     fetch(
-      `https://api.pexels.com/v1/search?query=${keyWord}&per_page=15
+      `https://api.pexels.com/v1/search?query=${keyWord}&per_page=12
 `,
       {
         method: "GET",
@@ -34,12 +44,17 @@ export default function Dictionary() {
           Authorization: process.env.REACT_APP_DICTIONARY_API_KEY,
         },
       }
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        gettingPicturesResults(data);
-      })
-      .catch((error) => console.error(error));
+    ).then((response) => {
+      if (response.status !== 200) {
+        return null;
+      }
+      response
+        .json()
+        .then((data) => {
+          gettingPicturesResults(data);
+        })
+        .catch((error) => console.error(error));
+    });
   }
 
   function gettingDictionaryresults(data) {
