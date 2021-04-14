@@ -1,6 +1,6 @@
 body {
-  background: var(--secondary-color);
-  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  background: var(--pink);
+  font-family: var(--primary-font-family);
   line-height: 30px;
   font-size: 15px;
 }
@@ -10,12 +10,12 @@ body {
   max-width: 1000px;
 }
 
-.App .website-logo {
-  max-width: 300px;
-  padding: 35px;
-  margin: 0 auto;
+.App .website-title {
+  font-family: var(--secondary-font-family);
+  margin-top: 20px;
   text-align: center;
-  display: block;
+  padding: 20px;
+  font-size: 60px;
 }
 
 .App-footer {
