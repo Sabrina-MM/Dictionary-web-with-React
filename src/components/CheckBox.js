@@ -23,7 +23,7 @@ export default function CheckBox() {
 
   return (
     <div className="form-check form-switch">
-      <small className="form-check-label">Change the color</small>
+      <small className="form-check-label">Change the background</small>
       <input
         className="form-check-input"
         type="checkbox"
