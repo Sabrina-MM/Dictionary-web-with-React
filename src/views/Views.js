@@ -1,6 +1,6 @@
-import logo from "../img/logo.png";
 import Dictionary from "../components/Dictionary";
 import ScrollToTop from "../components/ScrollToTop";
+import CheckBox from "../components/CheckBox";
 
 import "../css/App.css";
 
@@ -9,11 +9,8 @@ export default function Views() {
     <div className="App">
       <div className="container">
         <header>
-          <img
-            src={logo}
-            alt="Dictionary Logo"
-            className="website-logo img-fluid"
-          />
+          <h1 className="website-title">Dictionary</h1>
+          <CheckBox />
         </header>
         <main>
           <Dictionary />
