@@ -1,0 +1,17 @@
+div .form-check {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 26px;
+  padding: 0px;
+  margin-right: 12px;
+}
+
+.form-switch .form-check-input:checked {
+  background-color: var(--pink);
+}
+.form-check-label {
+  font-size: 15px;
+  font-family: var(--secondary-font-family);
+  padding-right: 73px;
+  margin-top: 4px;
+}
