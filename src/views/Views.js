@@ -19,7 +19,7 @@ export default function Views() {
 
         <footer className="App-footer">
           <small>
-            This project was coded by Sabrina Martinez and is{" "}
+            @2021 This project was coded by Sabrina Martinez and is{" "}
             <a
               href="https://github.com/Sabrina-MM"
               target="_blank"
