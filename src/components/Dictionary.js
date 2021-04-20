@@ -86,6 +86,7 @@ export default function Dictionary() {
     let url = `https://api.pexels.com/v1/search?query=${keyWord}&per_page=&page=0
 `;
     fetchImages(url);
+    setErrorMessage(); // update once you change the word again
   }
 
   return (
@@ -105,6 +106,7 @@ export default function Dictionary() {
         <small>
           <i>i.e. paris, wine, yoga, coding</i>
           <br />
+
           <span className="text-danger">{errorMessage}</span>
         </small>
       </section>
