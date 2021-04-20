@@ -12,16 +12,10 @@ export default function CheckBox() {
       document
         .getElementsByTagName("audio")
         .item(0).style = ambienteBackgroundColorAlternative;
-      document
-        .getElementsByTagName("audio")
-        .item(1).style = ambienteBackgroundColorAlternative;
-    } else {
+    } else if (e.target.checked === false) {
       document
         .getElementsByTagName("audio")
         .item(0).style = ambienteBackgroundColor;
-      document
-        .getElementsByTagName("audio")
-        .item(1).style = ambienteBackgroundColor;
 
       document.body.style = ambienteBackgroundColor;
     }
