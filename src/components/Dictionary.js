@@ -8,35 +8,51 @@ export default function Dictionary() {
   const [keyWord, setKeyWord] = useState("welcome");
   const [results, setResults] = useState("");
   const [photos, setPhotos] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [nextPage, setNextPage] = useState();
 
   useEffect(() => {
-    gettingData();
+    fetchDictionaryData();
+    let url = `https://api.pexels.com/v1/search?query=${keyWord}&per_page=&page=0
+`;
+    fetchImages(url);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  function gettingData() {
+  function fetchDictionaryData() {
     // getting data(dictionary) from API
 
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyWord}`).then(
       (response) => {
         if (response.status !== 200) {
-          alert(
-            `Sorry, I can not find "${keyWord}". Try again with another word!`
+          setErrorMessage(
+            <div>
+              <i class="fas fa-exclamation-triangle"></i> Sorry, I can not find{" "}
+              "{keyWord}". Try again with another word!
+            </div>
           );
+
           return;
         }
         response
           .json()
           .then((data) => {
-            gettingDictionaryresults(data);
+            setResults(data[0]);
           })
           .catch((error) => console.error(error));
       }
     );
+  }
 
-    // geeting data(pictures) from pexels.com API
+  function fetchNextImages(url) {
+    fetchImages(url);
+  }
+
+  function fetchImages(url) {
+    console.log(url);
+    // geeting data(pictures) from pexels.com API and next-page
 
     fetch(
-      `https://api.pexels.com/v1/search?query=${keyWord}&per_page=12
+      `${url}
 `,
       {
         method: "GET",
@@ -51,23 +67,25 @@ export default function Dictionary() {
       response
         .json()
         .then((data) => {
-          gettingPicturesResults(data);
+          setPhotos(data.photos);
+          if (data.next_page) {
+            setNextPage(data.next_page);
+          }
         })
         .catch((error) => console.error(error));
     });
   }
 
-  function gettingDictionaryresults(data) {
-    setResults(data[0]);
-  }
-
-  function gettingPicturesResults(data) {
-    setPhotos(data.photos);
+  function clickNextPage() {
+    fetchNextImages(nextPage);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    gettingData();
+    fetchDictionaryData();
+    let url = `https://api.pexels.com/v1/search?query=${keyWord}&per_page=&page=0
+`;
+    fetchImages(url);
   }
 
   return (
@@ -86,10 +104,22 @@ export default function Dictionary() {
         </form>
         <small>
           <i>i.e. paris, wine, yoga, coding</i>
+          <br />
+          <span className="text-danger">{errorMessage}</span>
         </small>
       </section>
       <Results results={results} />
       <PhotoGallery photos={photos} />
+      <div className="d-flex justify-content-center">
+        {nextPage ? (
+          <button
+            onClick={clickNextPage}
+            className="btn btn-warning  me-3  shadow"
+          >
+            More Photos <i className="fas fa-angle-double-right"></i>
+          </button>
+        ) : null}
+      </div>
     </div>
   );
 }

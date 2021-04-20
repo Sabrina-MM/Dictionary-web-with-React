@@ -12,9 +12,7 @@ export default function ScrollToTop() {
 
   return (
     <div className="Scroll-to-top">
-      <p className="text-center">
-        <i onClick={goToTop} className="fas fa-angle-double-up fs-4 p-2"></i>
-      </p>
+      <i onClick={goToTop} className="fas fa-angle-double-up fs-4 p-2"></i>
     </div>
   );
 }
