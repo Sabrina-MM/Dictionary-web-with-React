@@ -19,6 +19,9 @@ export default function CheckBox() {
       document
         .getElementsByTagName("audio")
         .item(0).style = ambienteBackgroundColor;
+      document
+        .getElementsByTagName("audio")
+        .item(1).style = ambienteBackgroundColor;
 
       document.body.style = ambienteBackgroundColor;
     }
