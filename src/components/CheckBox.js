@@ -12,11 +12,20 @@ export default function CheckBox() {
       document
         .getElementsByTagName("audio")
         .item(0).style = ambienteBackgroundColorAlternative;
+      if (document.getElementsByTagName("audio").length > 1) {
+        document
+          .getElementsByTagName("audio")
+          .item(1).style = ambienteBackgroundColorAlternative;
+      }
     } else if (e.target.checked === false) {
       document
         .getElementsByTagName("audio")
         .item(0).style = ambienteBackgroundColor;
-
+      if (document.getElementsByTagName("audio").length > 1) {
+        document
+          .getElementsByTagName("audio")
+          .item(1).style = ambienteBackgroundColor;
+      }
       document.body.style = ambienteBackgroundColor;
     }
   }
