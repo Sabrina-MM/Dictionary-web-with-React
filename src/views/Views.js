@@ -5,6 +5,11 @@ import CheckBox from "../components/CheckBox";
 import "../css/App.css";
 
 export default function Views() {
+  if (!process.env.REACT_APP_DICTIONARY_API_KEY) {
+    console.log("Api Key no set!");
+    return false;
+  }
+
   return (
     <div className="App">
       <div className="container">

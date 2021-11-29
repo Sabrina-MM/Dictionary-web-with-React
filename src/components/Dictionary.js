@@ -48,7 +48,6 @@ export default function Dictionary() {
   }
 
   function fetchImages(url) {
-    console.log(url);
     // geeting data(pictures) from pexels.com API and next-page
 
     fetch(
